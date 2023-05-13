@@ -54,10 +54,10 @@ You can also choose from the following table to select the desired data based on
 
 You can run Part 2 of the demo.mat to experience the variation of AoA with the number of packets.
 
-![AoA](.\fig\AoA.jpg)
+![AoA](./fig/AoA.jpg)
 
 ### Experience the variation of the trajectory.
 
 You can run Part 3 of the demo.mat to observe the variation of the trajectory.
 
-![track](.\fig\track.jpg)
+![track](./fig/track.jpg)
