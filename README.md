@@ -41,12 +41,12 @@ For example, if you want the data for "Lounge", 'sRE5', 'user3', and 'w', you ju
 
 You can also choose from the following table to select the desired data based on the specific scenarios you are interested in.
 
-| Room Name |       AP Name        | user_id |      |
-| :-------: | :------------------: | :-----: | ---- |
-|  Lounge   | sRE4,sRE5,sRE6,sRE7  |   1-7   |      |
-|  Office   | sRE22,sRE5,sRE6,sRE7 |   1-5   |      |
-|    Lab    | sRE22,sRE5,sRE6,sRE7 |   1-5   |      |
-|    Con    | sRE22,sRE5,sRE6,sRE7 |   1-5   |      |
+| Room Name |       AP Name        | user_id | 
+| :-------: | :------------------: | :-----: | 
+|  Lounge   | sRE4,sRE5,sRE6,sRE7  |   1-7   |  
+|  Office   | sRE22,sRE5,sRE6,sRE7 |   1-5   | 
+|    Lab    | sRE22,sRE5,sRE6,sRE7 |   1-5   | 
+|    Con    | sRE22,sRE5,sRE6,sRE7 |   1-5   | 
 
 
 
