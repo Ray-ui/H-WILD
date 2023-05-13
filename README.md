@@ -12,5 +12,6 @@ For more detailed information, please refer to the paper section: Dataset.
 
 ## Dataset Structure
 
-The format of each .mat filename is "Room_AP_Volunteer_Interference".
-For example, the filename "C401_sRE5_user1_w" denotes that this data is collected in room C401, the AP used is sRE5, the target user is 1, and another person interferes.
+The format of each .mat filename is "RoomName_APName_VolunteerID_InterferenceState".
+For example, the filename "Lounge_sRE4_user1_w" denotes that this data is collected in the Lounge, using AP sRE4, with the target user ID 1, while there is simultaneous interference from another persons;
+The filename "Lab_sRE5_user5_w" denotes that this data is collected in the Laboratory, using AP sRE5, with the target user ID 5, while there is no interference from another persons. 
