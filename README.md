@@ -81,3 +81,12 @@ Simultaneously, the results of triangulation are also displayed in the following
 
 
 ![heatmap](./fig/results.png)
+
+### How to access the dataset
+
+We believe that with these basic example codes, you will be able to quickly get started with our constructed dataset and extend it to various upstream tasks.
+
+If you use this dataset, please cite the following paper :
+
+**RLoc: Towards Robust Indoor Localization by Quantifying Uncertainty**
+
