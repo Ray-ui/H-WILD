@@ -52,7 +52,9 @@ You can also choose from the following table to select the desired data based on
 
 ### Experience the variation of Angle of Arrival (AoA).
 
-You can run Part 2 of the demo.mat to experience the variation of AoA with the number of packets.
+You can run Part 2 of the demo.mat to experience the variation of AoA with the number of packets. 
+
+
 
 ![AoA](./fig/AoA.jpg)
 
@@ -61,3 +63,21 @@ You can run Part 2 of the demo.mat to experience the variation of AoA with the n
 You can run Part 3 of the demo.mat to observe the variation of the trajectory.
 
 ![track](./fig/track.jpg)
+
+### Experience the example of the localization.
+
+You can run Section 4 to experience a simple triangulation-based localization.
+
+It demonstrates the results of traditional triangulation-based localization using the angle estimation results based on 2D-FFT. 
+
+The heatmap representation of triangulation shows the likelihood of the target being present at each position in space, with smaller values indicating higher probabilities.
+
+
+
+![heatmap](./fig/heatmap.png)
+
+Simultaneously, the results of triangulation are also displayed in the following figure.
+
+
+
+![heatmap](./fig/results.png)
