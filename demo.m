@@ -8,6 +8,10 @@ close all
 % to a specific room, a specific access point (AP), and a specific user, 
 % while also considering the presence of interference from other individuals.
 room_name = 'Lounge'; % Office, Lab, Con.
+ap_name = 'sRE5'; % sRE4, sRE6, sRE7, sRE22
+user_id = '3'; % 1-5/1-7.
+wo_interference = 'w';
+
 if strcmp(room_name, 'Lounge')
     file_name = 'Lounge';
 elseif strcmp(room_name, 'Office')
@@ -17,10 +21,6 @@ elseif strcmp(room_name, 'Lab')
 elseif strcmp(room_name, 'Con')
     file_name = 'Conference';
 end
-ap_name = 'sRE5'; % sRE4, sRE6, sRE7, sRE22
-user_id = '3'; % 1-5/1-7.
-wo_interference = 'w';
-
 data_path = ['./',file_name,'/',room_name,'_',ap_name,'_user',user_id,'_',wo_interference,'.mat'];
 load(data_path)
 

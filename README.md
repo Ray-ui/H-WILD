@@ -62,6 +62,8 @@ You can run Part 2 of the demo.mat to experience the variation of AoA with the n
 
 You can run Part 3 of the demo.mat to observe the variation of the trajectory.
 
+This figure displays the labeled trajectory of the target person, along with the positions of each AP in space. 
+
 ![track](./fig/track.jpg)
 
 ### Experience the example of the localization.
@@ -71,6 +73,8 @@ You can run Section 4 to experience a simple triangulation-based localization.
 It demonstrates the results of traditional triangulation-based localization using the angle estimation results based on 2D-FFT. 
 
 The heatmap representation of triangulation shows the likelihood of the target being present at each position in space, with smaller values indicating higher probabilities.
+
+All the AP positions and orientations are integrated in the code example, and you can find them in the `obtain_parameters.m` file.
 
 
 
