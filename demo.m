@@ -54,8 +54,8 @@ set(gca, 'XGrid','on');
 set(gca, 'YGrid','on');  
 set(gcf,'Position',[100 100 700 400])
 set(gca, 'LineWidth', 1.5);
-ylabel('x (m)', 'fontsize', 16);
-xlabel('y (m)', 'fontsize', 16);
+ylabel('y (m)', 'fontsize', 16);
+xlabel('x (m)', 'fontsize', 16);
 xlim([xLabels(1) xLabels(end)]);
 ylim([yLabels(1) yLabels(end)]);
 
@@ -96,8 +96,8 @@ figure;
 set(gca, 'defaultAxesFontName', 'Times New Roman', 'defaultAxesFontSize', 14);
 subplot(1,2,1);
 mesh(xLabels,yLabels,reshape(locationGridValue,locationGridPts)');
-ylabel('x (m)', 'fontsize', 16);
-xlabel('y (m)', 'fontsize', 16);
+ylabel('y (m)', 'fontsize', 16);
+xlabel('x (m)', 'fontsize', 16);
 set(gca, 'XGrid','on');
 set(gca, 'YGrid','on'); 
 set(gca, 'LineWidth', 1.5);
@@ -119,8 +119,8 @@ text(ap_location(3,1)+0.1, ap_location(3,2)+0.1,'AP3', 'FontSize', 14);hold on;
 plot(ap_location(4,1), ap_location(4,2), 'o', 'MarkerFaceColor', 'black', 'MarkerSize', 10);hold on;
 text(ap_location(4,1)+0.1, ap_location(4,2)+0.1,'AP4', 'FontSize', 14);hold on;
 legend('Estimated Location','Label Location')
-ylabel('x (m)', 'fontsize', 16);
-xlabel('y (m)', 'fontsize', 16);
+ylabel('y (m)', 'fontsize', 16);
+xlabel('x (m)', 'fontsize', 16);
 set(gca, 'XGrid','on');
 set(gca, 'YGrid','on'); 
 set(gca, 'LineWidth', 1.5);
@@ -128,3 +128,14 @@ title('Triangulation Result')
 xlim([xLabels(1) xLabels(end)]);
 ylim([yLabels(1) yLabels(end)]);
 set(gcf,'Position',[500 500 1000 400])
+
+%% Part5: How to get the Channel State Information?
+specific_csi = squeeze(features_csi(packet_num,:));
+figure;
+plot(abs(reshape(specific_csi,30,3)));
+ylabel('Amplitude', 'fontsize', 16);
+xlabel('Subcarrier index', 'fontsize', 16);
+legend('ant1','ant2','ant3');
+set(gca, 'XGrid','on');
+set(gca, 'YGrid','on'); 
+set(gca, 'LineWidth', 1.5);
