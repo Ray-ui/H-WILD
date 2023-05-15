@@ -29,7 +29,7 @@ Each .mat file contains a total of six variables.
 | uwb_coordinate_x | The X-axis coordinates obtained from the UWB positioning system. |
 | uwb_coordinate_y | The Y-axis coordinates obtained from the UWB positioning system. |
 
-## Example
+## Demo Code
 
 Here, through a few simple demo programs, we will guide you on how to quickly get started with this dataset. 
 
@@ -37,9 +37,16 @@ Here, through a few simple demo programs, we will guide you on how to quickly ge
 
 As mentioned earlier, each filename in our dataset carries specific meaning. You can simply use the filename as an index to open the desired data.
 
-For example, if you want the data for "Lounge", 'sRE5', 'user3', and 'w', you just need to run **Part 1** of the **demo.mat**.
+For example, if you want the data for "Lounge", 'sRE5', 'user3', and 'w', you just need to run **Part 1** of the **demo.mat**. 
 
 You can also choose from the following table to select the desired data based on the specific scenarios you are interested in.
+
+```matlab
+room_name = 'Lounge'; % Lounge,Office, Lab, Con.
+ap_name = 'sRE5'; % sRE4, sRE6, sRE7, sRE22
+user_id = '3'; % 1-5/1-7.
+wo_interference = 'w';
+```
 
 | Room Name |       AP Name        | user_id | 
 | :-------: | :------------------: | :-----: | 
