@@ -7,7 +7,7 @@ close all
 % In this section, we demonstrate how to load data that corresponds 
 % to a specific room, a specific access point (AP), and a specific user, 
 % while also considering the presence of interference from other individuals.
-room_name = 'Lounge'; % Office, Lab, Con.
+room_name = 'Lounge'; % Lounge,Office, Lab, Con.
 ap_name = 'sRE5'; % sRE4, sRE6, sRE7, sRE22
 user_id = '3'; % 1-5/1-7.
 wo_interference = 'w';
