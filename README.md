@@ -2,7 +2,7 @@
 
 We construct a human-held devices WiFi localization dataset, consisting of approximately **120k** data points collected from ten volunteers across **four** classic indoor scenarios. 
 
-*Note: This is a beta version of the dataset for review.  We attach our data and code to the **Private** repository and use [**anonymous Github**](https://anonymous.4open.science/) for review.  This dataset will be made publicly available upon acceptance of this work.  * 
+*Note: This is a beta version of the dataset for review.  We attach our data and code to the **Private** repository and use [**anonymous Github**](https://anonymous.4open.science/) for review.  This dataset will be made publicly available upon acceptance of this work. * 
 
 ## Dataset Introduction
 
@@ -18,7 +18,7 @@ The format of each .mat filename follows the pattern "RoomName_APName_VolunteerI
 
 ### Data
 
-Each .mat file contains a total of six variables.
+Each .mat file contains a total of six variables, as shown in the table below:
 
 | Variable Name    | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
@@ -29,17 +29,17 @@ Each .mat file contains a total of six variables.
 | uwb_coordinate_x | The X-axis coordinates obtained from the UWB positioning system. |
 | uwb_coordinate_y | The Y-axis coordinates obtained from the UWB positioning system. |
 
-## Demo Code
+##  "Show me the code."
 
 Here, through a few simple demo programs, we will guide you on how to quickly get started with this dataset. 
+
+First, you need to download the dataset and code to your computer. Make sure you have **MATLAB** software installed on your computer. 
 
 ### Load a specific data.
 
 As mentioned earlier, each filename in our dataset carries specific meaning. You can simply use the filename as an index to open the desired data.
 
 For example, if you want the data for "Lounge", 'sRE5', 'user3', and 'w', you just need to run **Part 1** of the **demo.mat**. 
-
-You can also choose from the following table to select the desired data based on the specific scenarios you are interested in.
 
 ```matlab
 room_name = 'Lounge'; % Lounge,Office, Lab, Con.
@@ -48,14 +48,14 @@ user_id = '3'; % 1-5/1-7.
 wo_interference = 'w';
 ```
 
+You can also choose from the following table to select the desired data based on the specific scenarios you are interested in.
+
 | Room Name |       AP Name        | user_id | 
 | :-------: | :------------------: | :-----: | 
 |  Lounge   | sRE4,sRE5,sRE6,sRE7  |   1-7   |  
 |  Office   | sRE22,sRE5,sRE6,sRE7 |   1-5   | 
 |    Lab    | sRE22,sRE5,sRE6,sRE7 |   1-5   | 
 |    Con    | sRE22,sRE5,sRE6,sRE7 |   1-5   | 
-
-
 
 ### Experience the variation of Angle of Arrival (AoA).
 
