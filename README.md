@@ -1,6 +1,6 @@
 # Human-held devices Dataset.
 
-We construct a human-held devices WiFi localization dataset, consisting of approximately **90k** data points collected from ten volunteers across **four** classic indoor scenarios. 
+We construct a human-held devices WiFi localization dataset, consisting of approximately **120k** data points collected from ten volunteers across **four** classic indoor scenarios. 
 
 We believe this dataset provides a more practical view for the future research on WiFi-based localization. 
 
