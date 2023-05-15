@@ -2,15 +2,13 @@
 
 We construct a human-held devices WiFi localization dataset, consisting of approximately **120k** data points collected from ten volunteers across **four** classic indoor scenarios. 
 
-We believe this dataset provides a more practical view for the future research on WiFi-based localization. 
-
-*Note: This is a beta version of the dataset for review. We will continue to update and improve the relevant description of the dataset.  We attach our data and code to the **Private** repository and use [**anonymous Github**](https://anonymous.4open.science/) for review.  This dataset will be made publicly available upon acceptance of this work.  * 
-
-
+*Note: This is a beta version of the dataset for review.  We attach our data and code to the **Private** repository and use [**anonymous Github**](https://anonymous.4open.science/) for review.  This dataset will be made publicly available upon acceptance of this work.  * 
 
 ## Dataset Introduction
 
 For more detailed information about the dataset, please refer to the "Dataset" section in the paper.
+
+In the "Dataset" section, we provide an overview of our motivation for creating a new dataset and describe the process of data collection in detail. 
 
 ## Dataset Structure
 
