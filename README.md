@@ -101,5 +101,5 @@ Part 5 guides us on how to extract and utilize CSI (Channel State Information) d
 
 
 
-To sum up, we believe that with these basic example codes, you will be able to quickly get started with our constructed dataset and extend it to various upstream tasks.
+We believe that with these basic example codes, you will be able to quickly get started with our constructed dataset and extend it to various upstream tasks. :)
 
