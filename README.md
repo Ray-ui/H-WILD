@@ -95,7 +95,11 @@ Simultaneously, the results of triangulation are also displayed in the following
 
 ### Experience the Amplitude of CSI.
 
-Part 5 guides us on how to extract and utilize CSI (Channel State Information) data.
+Part 5 guides us on how to extract and utilize CSI (Channel State Information) data. 
+
+You can gain an understanding of our CSI format through this example.
+
+
 
 ![CSI](./fig/csi.png)
 
