@@ -1,33 +1,120 @@
-# Human-held devices Dataset.
+# Human-held device WiFi localization and tracking dataset
 
-We construct a human-held devices WiFi localization dataset, consisting of approximately **120k** data points collected from ten volunteers across **four** classic indoor scenarios. 
+We construct a human-held device WiFi localization dataset, consisting of approximately **120k** data points collected from ten volunteers across **four** classic indoor scenarios. 
 
 *Note: This is a beta version of the dataset for review.  We attach our data and code to the **Private** repository and use [**anonymous Github**](https://anonymous.4open.science/) for review.  This dataset will be made publicly available upon acceptance of this work.* 
 
+## Table of contents
+
+[toc]
+
+## Updates
+
+***2023/05***
+
+*Beta-v0.1 (For review only)*: First commit.
+
+***2023/07***
+
+*Beta-v0.2 (For review only)*: Supplement the content of "Dataset Introduction" and "Dataset structure" in detail. 
+
 ## Dataset Introduction
 
-For more detailed information about the dataset, please refer to the "Dataset" section in the paper.
+### Why we made human-held device dataset?
 
-In the "Dataset" section, we provide an overview of our motivation for creating a new dataset and describe the process of data collection in detail. 
+The public [Robot-based Dataset]([WCSNG - Research (ucsd.edu)](https://wcsng.ucsd.edu/wild/)) employs a robot equipped with Simultaneous Localization And Mapping (SLAM) technology to gather ground truth location estimates corresponding to wireless channels. However, real-world usage scenarios often involve users holding their devices in their hands, introducing additional effects such as occlusion caused by human bodies that are not modeled in existing localization system architectures. To address this gap, we generalize the scenario from robot-held to human-held devices.  We believe this dataset would facilitate future research on WiFi-based localization and tracking.
 
-## Dataset Structure
+###  How was your data collected and annotated?
+
+<div align="center">
+    <a>
+    	<img src="./fig/Conference.jpg" alt=":(" style="zoom:10%;" /> <img src="./fig/Office.jpg" alt=":(" style="zoom:10%;" /> 
+    </a>
+</div>
+
+<center><p> Conference & Office</p></center>
+
+<div align="center">
+    <a>
+    	<img src="./fig/Laboratory.jpg" alt=":(" style="zoom:10%;" /> <img src="./fig/Lounge.jpg" alt=":(" style="zoom:10%;" /> 
+    </a>
+</div>
+
+<center><p> Laboratory & Lounge </p></center>
+
+*(Please note that there are four UWB tags in each environment. Some UWB tags may not be labeled in the image.)*
+
+| Environments | Room Size | AP Number |                      Description                       |
+| :----------: | :-------: | :-------: | :----------------------------------------------------: |
+|  Conference  |  8m × 8m  |     4     |    Simple LOS based environment in conference room.    |
+|  Laboratory  | 10m × 10m |     4     |      Simple LOS based environment in laboratory.       |
+|    Office    | 9m × 12m  |     4     |     Complex High-multipath environment in office.      |
+|    Lounge    | 12m × 14m |     4     | Complex High-multipath and NLOS environment in lounge. |
+
+We collect datasets in four typical indoor scenarios: conference, laboratory, office, and lounge. During  data collection, volunteers are instructed to walk freely around the room while holding the transmitter in their hands. They can walk slowly, walk quickly, or stop, just as they normally would do during their daily activities. Each volunteer walks alone for 6 minutes and then with other persons, who could potentially cause interference, for 3 minutes.  And we use an Ultra-Wideband (UWB) based localization system with an accuracy of ten of centimeters to collect ground truth location data. 
+
+For more detailed information about the dataset, please refer to the "Dataset" section in the paper. 
+
+## Dataset structure
 
 ### Filename
 
-The format of each .mat filename follows the pattern "RoomName_APName_VolunteerID_InterferenceState". For instance, the filename "Lounge_sRE4_user1_w" indicates that the data was collected in the Lounge, using AP sRE4, with the target user ID 1, while there was simultaneous interference from other individuals. Similarly, the filename "Lab_sRE5_user5_wo" indicates that the data was collected in the Laboratory, using AP sRE5, with the target user ID 5, and there was no interference from other individuals.
+The format of each .mat filename follows the pattern "RoomName_APName_VolunteerID_InterferenceState". For instance, the filename "Lounge_sRE4_user1_w" indicates that the data was collected in the Lounge, using AP sRE4, with the target user ID 1, while there was simultaneous interference from other individuals. Similarly, the filename "Lab_sRE5_user5_wo" indicates that the data was collected in the Laboratory, using AP sRE5, with the target user ID 5, and there was no interference from other individuals. 
 
 ### Data
 
 Each .mat file contains a total of six variables, as shown in the table below:
 
-| Variable Name    | Description                                                  |
-| ---------------- | ------------------------------------------------------------ |
-| estimations_aoa  | The estimated angles obtained from 2D-FFT.                   |
-| features_csi     | The measured CSI information is provided in the format of 1x90. Specifically, it consists of data from three antennas, with each antenna capturing 30 subcarriers. |
-| features_rssi    | The measured RSSI information,  with each RSSI formatted as 1x3. |
-| labels_aoa       | The label angles.                                            |
+|  Variable Name   |                         Description                          |
+| :--------------: | :----------------------------------------------------------: |
+| estimations_aoa  |          The estimated angles obtained from 2D-FFT.          |
+|   features_csi   | The measured CSI information is provided in the format of 1x90. Specifically, it consists of data from three antennas, with each antenna capturing 30 subcarriers. |
+|  features_rssi   | The measured RSSI information,  with each RSSI formatted as 1x3. |
+|    labels_aoa    |                      The label angles.                       |
 | uwb_coordinate_x | The X-axis coordinates obtained from the UWB positioning system. |
 | uwb_coordinate_y | The Y-axis coordinates obtained from the UWB positioning system. |
+
+### Descriptive statistics
+
+This section presents the statistical analysis of the angle of arrival (AoA) and trajectory data for four typical indoor rooms. 
+
+The "AoA statistics" subfigure provides an overview of the distribution of the true AoA for each AP as well as the overall distribution of the true AoA across all APs. 
+
+The "2D floor plan" subfigure displays the distribution of the dataset's trajectories, with the positions of the APs represented by red dots.
+
+- Conference
+
+  <div align="center">
+      <a>
+      	<img src="./fig/Conference_1.jpg" alt=":(" style="zoom:45%;" /> <img src="./fig/Conference_2.jpg" alt=":(" style="zoom:45%;" /> 
+      </a>
+  </div>
+
+- Office
+
+  <div align="center">
+      <a>
+      	<img src="./fig/Office_1.jpg" alt=":(" style="zoom:45%;" /> <img src="./fig/Office_2.jpg" alt=":(" style="zoom:45%;" /> 
+      </a>
+  </div>
+
+- Laboratory
+
+  <div align="center">
+      <a>
+      	<img src="./fig/Laboratory_1.jpg" alt=":(" style="zoom:45%;" /> <img src="./fig/Laboratory_2.jpg" alt=":(" style="zoom:45%;" /> 
+      </a>
+  </div>
+
+- Lounge
+
+<div align="center">
+    <a>
+    	<img src="./fig/Lounge_1.jpg" alt=":(" style="zoom:45%;" /> <img src="./fig/Lounge_2.jpg" alt=":(" style="zoom:45%;" /> 
+    </a>
+</div>
+
+
 
 ##  "Show me the code."
 
@@ -57,13 +144,18 @@ You can also choose from the following table to select the desired data based on
 |    Lab    | sRE22,sRE5,sRE6,sRE7 |   1-5   | 
 |    Con    | sRE22,sRE5,sRE6,sRE7 |   1-5   | 
 
+
+
 ### Experience the variation of Angle of Arrival (AoA).
 
 You can run Part 2 of the `demo.mat` to experience the variation of AoA with the number of packets. 
 
+<div align="center">
+    <a>
+    	<img src="./fig/AoA.jpg" alt=":(" style="zoom:66%;" /> 
+    </a>
+</div>
 
-
-![AoA](./fig/AoA.jpg)
 
 ### Experience the variation of the trajectory.
 
@@ -71,7 +163,12 @@ You can run Part 3 of the `demo.mat` to observe the variation of the trajectory.
 
 This figure displays the labeled trajectory of the target person, along with the positions of each AP in space. 
 
-![track](./fig/track.jpg)
+<div align="center">
+    <a>
+    	<img src="./fig/track.jpg" alt=":(" style="zoom:66%;" /> 
+    </a>
+</div>
+
 
 ### Experience the example of the localization.
 
@@ -85,13 +182,27 @@ All the AP positions and orientations are integrated in the code example, and yo
 
 
 
-![heatmap](./fig/heatmap.png)
+<div align="center">
+    <a>
+    	<img src="./fig/heatmap.png" alt=":(" style="zoom:66%;" /> 
+    </a>
+</div>
+
+
 
 Simultaneously, the results of triangulation are also displayed in the following figure.
 
 
 
-![heatmap](./fig/results.png)
+<div align="center">
+    <a>
+    	<img src="./fig/results.png" alt=":(" style="zoom:66%;" /> 
+    </a>
+</div>
+
+
+
+
 
 ### Experience the Amplitude of CSI.
 
@@ -101,9 +212,27 @@ You can gain an understanding of our CSI format through this example.
 
 
 
-![CSI](./fig/csi.png)
+<div align="center">
+    <a>
+    	<img src="./fig/csi.png" alt=":(" style="zoom:66%;" /> 
+    </a>
+</div>
 
 
 
-We believe that with these basic example codes, you will be able to quickly get started with our constructed dataset and extend it to various upstream tasks. :)
+We believe that with these basic example codes, you will be able to quickly get started with our constructed dataset and extend it to various upstream tasks.
+
+Good Luck.  :)
+
+## Discussion about potential  limitations
+
+1. There is still a gap between our device settings and the practical transmitters (e.g., mobile phones, IOT devices) and receivers. On the one hand, we utilize the omni-directional monopole antenna as the transmitting antenna in our settings.  However, real mobile phones commonly employ patch antennas, such as the Inverted-F Antenna (IFA) and  the Planar Inverted-F Antenna (PIFA). Furthermore, these Wi-Fi antenna efficiencies are is decreased due to the lossy resistance of all the components surrounding the antenna, including the camera, PCB, and glass on the screen.  On the other hand,  we assume that the receiving antennas of the access points (APs) are arranged in a uniform linear array with an inter-antenna spacing of half a wavelength. However,  APs may employ irregular arrays or arrays larger than half a wavelength to ensure antenna independence. 
+
+2. Similar to previous research settings, our experiments are limited to 2D mapping, and we perform 2D localization. However, it is important to note that the real-world environment is three-dimensional, and the variations in handheld device height (e.g., due to different heights of individuals) are not captured in the dataset, which may be considered as one of the limitations of our dataset. 
+
+## References
+
+- [1] [Linux 802.11n CSI Tool]([Linux 802.11n CSI Tool (dhalperi.github.io)](https://dhalperi.github.io/linux-80211n-csitool/))
+- [2] [Wireless Indoor Localization Dataset (WILD)]([WCSNG - Research (ucsd.edu)](https://wcsng.ucsd.edu/wild/))
+- [3] [WIFI Antenna Design]([WIFI Antennas On Mobile Phones (antenna-theory.com)](https://www.antenna-theory.com/design/wifi.php))
 
