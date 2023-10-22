@@ -1,6 +1,6 @@
-# Human-held device WiFi localization and tracking dataset
+# Human-held device WiFi indoor localization dataset
 
-We construct a human-held device WiFi localization dataset, consisting of approximately **120k** data points collected from ten volunteers across **four** classic indoor scenarios. 
+We construct a human-held device WiFi indoor localization dataset (**H-WILD**), consisting of approximately **120k** data points collected from ten volunteers across **four** classic indoor scenarios. 
 
 ## Table of contents
 
