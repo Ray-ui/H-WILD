@@ -235,5 +235,4 @@ If you use this dataset, please cite our paper.
 
 - [1] [Linux 802.11n CSI Tool]([Linux 802.11n CSI Tool (dhalperi.github.io)](https://dhalperi.github.io/linux-80211n-csitool/))
 - [2] [Wireless Indoor Localization Dataset (WILD)]([WCSNG - Research (ucsd.edu)](https://wcsng.ucsd.edu/wild/))
-- [3] [WIFI Antenna Design]([WIFI Antennas On Mobile Phones (antenna-theory.com)](https://www.antenna-theory.com/design/wifi.php))
 
