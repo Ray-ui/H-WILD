@@ -230,6 +230,16 @@ Good Luck.  :)
 ## Citation
 
 If you use this dataset, please cite our paper.
+> @article{zhang2024rloc,
+  title={RLoc: Towards Robust Indoor Localization by Quantifying Uncertainty},
+  author={Zhang, Tianyu and Zhang, Dongheng and Wang, Guanzhong and Li, Yadong and Hu, Yang and sun, Qibin and Chen, Yan},
+  journal={Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies},
+  volume={7},
+  number={4},
+  pages={1--28},
+  year={2024},
+  publisher={ACM New York, NY, USA}
+}
 
 ## References
 
